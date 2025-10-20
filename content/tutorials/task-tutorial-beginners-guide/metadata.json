@@ -1,6 +1,7 @@
 {
   "id": 2,
   "title": "Chapter 1: Getting Started with NocoBase",
+  
   "title_cn": "第一章：界面和安装介绍——初识 NocoBase",
   "title_ja": "第1章：NocoBaseの概要とインストール",
   "description": "This tutorial guides you through a quick demo of NocoBase's powerful features, familiarizes you with its basic interface configuration, plugin management, and system settings, and teaches you how to install NocoBase locally or on a server, laying a solid foundation for building a task management system.",
