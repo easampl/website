@@ -1,0 +1,68 @@
+---
+import PageHeader from "../../../components/PageHeader.astro";
+import Layout from "../../../layouts/Layout.astro";
+import { getPage } from "../../../utils";
+
+const page = await getPage("permissions");
+
+const title = page.title;
+const description = page.description;
+const keywords = page.keywords;
+---
+
+<Layout title={title} description={description} keywords={keywords}>
+  <PageHeader title={title}>
+    <span slot="description" set:html={description}></span>
+  </PageHeader>
+  <!-- Start Highlights -->
+  <section class="section">
+    <div class="container">
+      <div class="row align-items-top ">
+        <div class="col-lg-5 col-md-5">
+          <div class="section-title">
+            <h5 class="mb-4">Контроль <span class="text-primary">системных прав</span></h5>
+            <p class="text-muted">При разработке в NocoBase можно назначать разработчикам разные системные роли, чтобы каждый имел доступ только к разрешенным модулям.</p>
+          </div>
+        </div><!--end col-->
+        <div class="col-lg-7">
+          <div class="card rounded border-0 shadow ms-lg-5">
+            <video controls class="rounded shadow">
+              <source src="https://static-docs.nocobase.com/PM-4.1-EN.mp4" type="video/mp4">
+            </video>
+          </div>
+        </div><!--end col-->
+      </div><!--end row-->
+      <div class="row align-items-top mt-100">
+        <div class="col-lg-5 col-md-5">
+          <div class="section-title">
+            <h5 class="mb-4">Тонкая настройка прав на <span class="text-primary">уровне записей и полей</span></h5>
+            <p class="text-muted">NocoBase позволяет детально управлять правами и на уровне строк, и на уровне отдельных полей, чтобы сотрудники видели и меняли только разрешенные данные.<br>Например, менеджер по продажам может просматривать и редактировать клиентов, за которых отвечает, видеть без права редактирования клиентов коллег по отделу и не иметь доступа к общей сумме заказов.</p>
+          </div>
+        </div><!--end col-->
+        <div class="col-lg-7">
+          <div class="card rounded border-0 shadow ms-lg-5">
+            <video controls class="rounded shadow">
+              <source src="https://static-docs.nocobase.com/PM-4.2-EN.mp4" type="video/mp4">
+            </video>
+          </div>
+        </div><!--end col-->
+      </div><!--end row-->
+      <div class="row align-items-top mt-100">
+        <div class="col-lg-5 col-md-5">
+          <div class="section-title">
+            <h5 class="mb-4"><span class="text-primary">Несколько ролей</span> и объединение прав для одного пользователя</h5>
+            <p class="text-muted">Когда на странице присутствует несколько блоков и действий, потоки событий помогают управлять логикой их взаимодействия. Например, просматривая клиента в CRM, можно одновременно получать его заказы из ERP. В бизнес-системах пользователи нередко совмещают несколько ролей. NocoBase позволяет назначать одну или несколько ролей одному пользователю и поддерживает три стратегии совмещения прав.</p>
+          </div>
+        </div><!--end col-->
+        <div class="col-lg-7">
+          <div class="card rounded border-0 shadow ms-lg-5">
+            <video controls class="rounded shadow">
+              <source src="https://static-docs.nocobase.com/PM-4.3-EN.mp4" type="video/mp4">
+            </video>
+          </div>
+        </div><!--end col-->
+      </div><!--end row-->
+    </div><!--end container-->
+  </section><!--end section-->
+  <!-- Highlights End -->
+</Layout>

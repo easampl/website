@@ -1,0 +1,1138 @@
+---
+import PageHeader from "../../components/PageHeader.astro";
+import Layout from "../../layouts/Layout.astro";
+
+const title = "Сервисные партнеры NocoBase";
+const description =
+  "Найдите сертифицированных партнеров NocoBase по всему миру и получите профессиональную техническую поддержку и консалтинг.";
+const keywords = "NocoBase, партнеры, сервисные партнеры, техническая поддержка, консалтинг";
+
+const partnersByContinent = [
+  {
+    continent: "Азия",
+    partners: [
+      {
+        id: "82",
+        name: "Shanghai Uoqian Information Technology Co., Ltd. (SeaDocker)",
+        location: "Китай · Шанхай",
+        description:
+          "SeaDocker - это единая платформа кросс-граничной e-commerce от компании Uoqian, обеспечивающая полный цикл: от агрегации заказов и складской логистики до глобальных сервисов. На базе NocoBase команда создала многоязычную, мультиорганизационную и многоролевую OA-систему для глобального взаимодействия в области финансов, HR и других функций.",
+        logo: "https://service-cn.nocobase.com/storage/uploads/攸迁logo-u6g63u.svg",
+        website: "www.seadocker.com",
+        services: [
+          { category: "Типы услуг", sub: ["Внедрение и запуск", "Индивидуальная разработка", "Техническая поддержка"] },
+          { category: "Корпоративные системы", sub: ["Планирование ресурсов предприятия (ERP)", "Склад и запасы (WMS / Inventory)", "Офисная автоматизация (OA)"] },
+          { category: "Отраслевые решения", sub: ["Розница / e-commerce"] }
+        ],
+        contact: "leon@uoqian.com",
+        cn: true,
+        certified: true,
+        featured: false
+      },
+      {
+        id: "22",
+        name: "Zhengzhou Guangliangzi Information Technology Co., Ltd.",
+        location: "Китай · Чжэнчжоу",
+        description:
+          "Внедряют no-code решения для управления кампусом, чтобы снижать затраты и повышать эффективность. На базе NocoBase создали системы регистрации преподавательских достижений и оценки результативности с полностью цифровыми процессами.",
+        logo: "https://service-cn.nocobase.com/storage/uploads/logo-94chjl.jpg",
+        website: "",
+        services: [
+          { category: "Типы услуг", sub: ["Внедрение и запуск", "Индивидуальная разработка", "Техническая поддержка"] },
+          {
+            category: "Корпоративные системы",
+            sub: ["Бронирование и планирование", "Управление бизнес-процессами (BPM)", "Система управления контентом (CMS)", "Управление взаимоотношениями с клиентами (CRM)", "Офисная автоматизация (OA)", "Склад и запасы (WMS / Inventory)"]
+          },
+          { category: "Отраслевые решения", sub: ["Образование", "Госструктуры и общественные услуги", "ИТ и ПО", "Строительство и недвижимость"] }
+        ],
+        contact: "zhaobo@guanglz.cn",
+        cn: true,
+        certified: true,
+        featured: false
+      },
+      {
+        id: "271",
+        name: "Shenzhen Chuanglianyun Technology Co., Ltd.",
+        location: "Китай · Шэньчжэнь",
+        description: "Специализируется на цифровых сервисах для госсектора: внедрение NocoBase, разработка плагинов и локальная поддержка.",
+        logo: "https://www.chuanglianyun.cn/upload/%E5%88%9B%E8%81%94%E4%BA%91%20logo.png",
+        website: "https://www.chuanglianyun.cn/",
+        services: [
+          { category: "Типы услуг", sub: ["Внедрение и запуск", "Индивидуальная разработка", "Техническая поддержка"] },
+          { category: "Отраслевые решения", sub: ["Госструктуры и общественные услуги"] }
+        ],
+        contact: "jason@chuanglianyun.cn",
+        cn: true,
+        certified: false,
+        featured: false
+      },
+      {
+        id: "199",
+        name: "Shanghai Aokun Information Technology Co., Ltd.",
+        location: "Китай · Шанхай",
+        description: "Комплексный поставщик инженерных услуг в авиации. На базе NocoBase построили внутреннюю BPM-систему для управления нормативами гражданской авиации.",
+        logo: "https://service-cn.nocobase.com/storage/uploads/六边鹰logo-英字-蓝色(copy)-szo4yi.png",
+        website: "https://www.aerok.com.cn",
+        services: [
+          { category: "Типы услуг", sub: ["Внедрение и запуск", "Индивидуальная разработка", "Техническая поддержка"] },
+          { category: "Корпоративные системы", sub: ["Управление бизнес-процессами (BPM)"] },
+          { category: "Отраслевые решения", sub: ["Авиация"] }
+        ],
+        contact: "wu.chaoqian@aerok.com.cn",
+        cn: true,
+        certified: false,
+        featured: false
+      },
+      {
+        id: "93",
+        name: "Anhui Youchao Digital Intelligence Information Technology Co., Ltd.",
+        location: "Китай · Уху, Аньхой",
+        description:
+          "Эксперты по цифровой трансформации строительства с глубоким опытом интеграции BIM, GIS и IoT. За неделю разработали систему сквозного контроля безопасности на железной дороге и полностью внедрили решение за два месяца.",
+        logo: "https://service-cn.nocobase.com/storage/uploads/有巢数智%20主LOGO-nkke01.png",
+        website: "http://www.youchaoyun.com",
+        services: [
+          { category: "Типы услуг", sub: ["Индивидуальная разработка", "Сопровождение и поддержка", "Разработка плагинов и расширений", "Разработка продукта", "Системная интеграция"] },
+          {
+            category: "Корпоративные системы",
+            sub: ["Управление взаимоотношениями с клиентами (CRM)", "Планирование ресурсов предприятия (ERP)", "Финансы и бухгалтерия", "Управление персоналом (HRM)", "Производство (MES / Orders)", "Офисная автоматизация (OA)", "Проекты и совместная работа (PM / Collaboration)", "Склад и запасы (WMS / Inventory)"]
+          },
+          { category: "Отраслевые решения", sub: ["Производство", "Строительство и недвижимость"] }
+        ],
+        contact: "wxf@youchaoyun.com",
+        cn: true,
+        certified: false,
+        featured: false
+      },
+      {
+        id: "38",
+        name: "Shanghai Xuli Information Technology Co., Ltd.",
+        location: "Китай · Шанхай",
+        description:
+          "Финтех-компания и поставщик коммерческих дата-сервисов. На NocoBase 1.5 реализовали экспертную базу инвестиционного банка с продуманными правами доступа и профилями специалистов.",
+        logo: "https://service-cn.nocobase.com/storage/uploads/logo-xnpryg.png",
+        website: "http://www.stander-info.com",
+        services: [
+          { category: "Типы услуг", sub: ["Внедрение (облако / on-premise)", "Миграция данных", "Разработка продукта", "Системная интеграция", "Технический консалтинг"] },
+          { category: "Корпоративные системы", sub: ["Управление взаимоотношениями с клиентами (CRM)", "E-commerce / розница (подписки / дистрибуция)", "Управление персоналом (HRM)"] },
+          { category: "Отраслевые решения", sub: ["Финансовые услуги", "Госструктуры и общественные услуги", "Розница / e-commerce"] }
+        ],
+        contact: "lifeye.yu@stander-info.com",
+        cn: true,
+        certified: false,
+        featured: false
+      },
+      {
+        id: "43",
+        name: "Jiangsu Orchisky Software Technology Co., Ltd.",
+        location: "Китай · Цзянсу",
+        description: "Предлагают сквозные цифровые решения для фабрик малого и среднего бизнеса. На базе NocoBase построили масштабируемую WMS-систему.",
+        logo: "https://service-cn.nocobase.com/storage/uploads/资源 8-xp5mv0.png",
+        website: "http://www.orchisky.com/",
+        services: [
+          { category: "Типы услуг", sub: ["Внедрение и запуск", "Индивидуальная разработка", "Техническая поддержка"] },
+          { category: "Корпоративные системы", sub: ["Склад и запасы (WMS / Inventory)"] },
+          { category: "Отраслевые решения", sub: ["Производство"] }
+        ],
+        contact: "haifeng.feng@orchisky.com",
+        cn: true,
+        certified: false,
+        featured: false
+      },
+      {
+        id: "78",
+        name: "3iWOM (Guangzhou) Information Technology Co., Ltd.",
+        location: "Китай · Гуанчжоу",
+        description:
+          "Консалтинг по цифровой трансформации и индивидуальные услуги для средних и крупных предприятий региона Большого залива. Обладают глубоким опытом в недвижимости, ритейле и производстве и работают с рядом компаний из списка Fortune 500.",
+        logo: "https://service-cn.nocobase.com/storage/uploads/3iwom%20logo-x39lp5.jpg",
+        website: "https://www.3iwom.com",
+        services: [
+          { category: "Типы услуг", sub: ["Внедрение и запуск", "Индивидуальная разработка", "Техническая поддержка"] },
+          {
+            category: "Корпоративные системы",
+            sub: ["Управление бизнес-процессами (BPM)", "Управление взаимоотношениями с клиентами (CRM)", "E-commerce / розница (подписки / дистрибуция)", "Планирование ресурсов предприятия (ERP)", "Финансы и бухгалтерия", "Управление персоналом (HRM)", "Производство (MES / Orders)", "Офисная автоматизация (OA)", "Проекты и совместная работа (PM / Collaboration)", "Недвижимость / управление объектами", "Склад и запасы (WMS / Inventory)"]
+          },
+          { category: "Отраслевые решения", sub: ["Госструктуры и общественные услуги", "Здравоохранение", "ИТ и ПО", "Производство", "Медиа и развлечения", "Строительство и недвижимость", "Розница / e-commerce"] }
+        ],
+        contact: "forest@3iwom.com",
+        cn: true,
+        certified: false,
+        featured: false
+      },
+      {
+        id: "81",
+        name: "Hunan Feiyu Wujie Technology Co., Ltd.",
+        location: "Китай · Чанша, Хунань (район Ванчэн)",
+        description:
+          "Комплексные услуги по разработке и внедрению no-code платформ: визуализация процессов, цифровизация управления и поддержка гибких инноваций.",
+        logo: "https://service-cn.nocobase.com/storage/uploads/微信图片_20250615231905_副本_副本-zto0bj.png",
+        website: "http://mc1122.wicp.net:8088/",
+        services: [
+          { category: "Типы услуг", sub: ["Внедрение (облако / on-premise)", "Индивидуальная разработка", "Сопровождение и поддержка", "Разработка продукта", "Системная интеграция"] },
+          {
+            category: "Корпоративные системы",
+            sub: ["Бронирование и планирование", "Управление бизнес-процессами (BPM)", "Система управления контентом (CMS)", "Управление взаимоотношениями с клиентами (CRM)", "E-commerce / розница (подписки / дистрибуция)", "Образование (LMS / студенты)", "Планирование ресурсов предприятия (ERP)", "Финансы и бухгалтерия", "Здравоохранение (EMR / управление пациентами)", "Управление персоналом (HRM)", "Производство (MES / Orders)", "Некоммерческие организации (пожертвования / мероприятия)", "Офисная автоматизация (OA)", "Проекты и совместная работа (PM / Collaboration)", "Недвижимость / управление объектами", "Склад и запасы (WMS / Inventory)"]
+          },
+          { category: "Отраслевые решения", sub: ["Образование", "Финансовые услуги", "Госструктуры и общественные услуги", "Здравоохранение", "ИТ и ПО", "Производство", "Медиа и развлечения", "Строительство и недвижимость", "Розница / e-commerce"] }
+        ],
+        contact: "249413181@qq.com",
+        cn: true,
+        certified: false,
+        featured: false
+      },
+      {
+        id: "1000159",
+        name: "Purple Bridge Sdn Bhd",
+        location: "Малайзия · Куала-Лумпур",
+        description: "Консалтинг по автоматизации и разработка решений, повышающих производительность и эффективность за счет индивидуальных систем.",
+        logo: "https://purplebridge.com.my/wp-content/uploads/2025/05/logor-1.png#149",
+        website: "https://www.purplebridge.my",
+        services: [
+          { category: "Типы услуг", sub: ["Внедрение и запуск", "Индивидуальная разработка", "Техническая поддержка"] },
+          { category: "Корпоративные системы", sub: ["Управление бизнес-процессами (BPM)", "Финансы и бухгалтерия", "Проекты и совместная работа (PM / Collaboration)", "Склад и запасы (WMS / Inventory)"] },
+          { category: "Отраслевые решения", sub: ["Финансовые услуги", "Здравоохранение", "Производство", "Розница / e-commerce"] }
+        ],
+        contact: "charles@purplebridge.my",
+        certified: true,
+        featured: false
+      },
+      {
+        id: "1000102",
+        name: "RakuCloud Co., Ltd.",
+        location: "Япония · Токио",
+        description: "Создают на NocoBase процессы биллинга, согласований и уведомлений для малого и среднего бизнеса и стартапов.",
+        logo: "https://static.wixstatic.com/media/aa943a_bfc9ee216d94418e9ed31b967d0f8444~mv2.png",
+        website: "https://www.rakucloud.co.jp/",
+        services: [
+          { category: "Типы услуг", sub: ["Внедрение и запуск", "Индивидуальная разработка", "Техническая поддержка"] },
+          { category: "Корпоративные системы", sub: ["Управление взаимоотношениями с клиентами (CRM)", "Управление биллингом"] },
+          { category: "Отраслевые решения", sub: ["Цифровая реклама", "ИТ и ПО", "Производство"] }
+        ],
+        contact: "jia@rakucloud.com",
+        certified: false,
+        featured: false
+      },
+      {
+        id: "1000113",
+        name: "Housewell Co., Ltd.",
+        location: "Япония · Сайтама (Омия, город Сайтама)",
+        description: "DX-консалтинг, проектирование решений, внедрение и эксплуатация для рынка недвижимости и других отраслей с учетом опыта на площадке.",
+        logo: "https://housewell-group.jp/assets/image/common/header/logo.webp",
+        website: "https://housewell-group.jp/",
+        services: [
+          { category: "Типы услуг", sub: ["Внедрение и запуск", "Индивидуальная разработка", "Техническая поддержка"] },
+          { category: "Корпоративные системы", sub: ["Система управления контентом (CMS)", "Управление взаимоотношениями с клиентами (CRM)", "Управление персоналом (HRM)", "Недвижимость / управление объектами"] },
+          { category: "Отраслевые решения", sub: ["Строительство и недвижимость"] }
+        ],
+        contact: "nakazawa@housewell.co.jp",
+        certified: false,
+        featured: false
+      },
+      {
+        id: "",
+        name: "Appnicorn Sdn Bhd",
+        location: "Малайзия · Куала-Лумпур",
+        description: "Техническая команда, ориентированная на модульные системы и low-code. Обладают опытом внедрения NocoBase и индивидуальной разработки.",
+        logo: "https://service-cn.nocobase.com/storage/uploads/cropped-Appnicorn_CompanyLogo-9zbmlc.png",
+        website: "https://appnicorn.com",
+        services: [
+          { category: "Типы услуг", sub: ["Внедрение (облако / on-premise)", "Индивидуальная разработка", "Миграция данных", "Сопровождение и поддержка", "Разработка плагинов и расширений", "Системная интеграция", "Технический консалтинг"] },
+          { category: "Корпоративные системы", sub: ["Управление взаимоотношениями с клиентами (CRM)", "Планирование ресурсов предприятия (ERP)", "Финансы и бухгалтерия", "Проекты и совместная работа (PM / Collaboration)", "Склад и запасы (WMS / Inventory)"] },
+          { category: "Отраслевые решения", sub: ["Образование", "Госструктуры и общественные услуги", "Производство", "Розница / e-commerce"] }
+        ],
+        contact: "wing@appnicorn.com.my",
+        certified: false,
+        featured: false
+      }
+    ]
+  },
+  {
+    continent: "Европа",
+    partners: [
+      {
+        id: "1000128",
+        name: "NIT Solutions B.V.",
+        location: "Нидерланды · Горинхем",
+        description: "Консалтинг, внедрение и постоянная оптимизация CRM-систем в соответствии с бизнес-процессами.",
+        logo: "https://nitsolutions.b-cdn.net/wp-content/uploads/2025/01/logo-nit-solutions.png",
+        website: "https://nit.solutions",
+        services: [
+          { category: "Типы услуг", sub: ["Внедрение и запуск", "Индивидуальная разработка", "Техническая поддержка"] },
+          { category: "Корпоративные системы", sub: ["Управление взаимоотношениями с клиентами (CRM)"] },
+          { category: "Отраслевые решения", sub: ["Производство", "Строительство и недвижимость", "Розница / e-commerce"] }
+        ],
+        contact: "dion@nitsolutions.nl",
+        certified: false,
+        featured: false
+      }
+    ]
+  },
+  {
+    continent: "Южная Америка",
+    partners: [
+      {
+        id: "1000177",
+        name: "ED",
+        location: "Бразилия · Рио-де-Жанейро",
+        description:
+          "Команда ED насчитывает более 120 консультантов с экспертизой в разных технологических стэках и внедряет цифровое управление и повышение эффективности для образования, финансового сектора, государственных структур, здравоохранения и других отраслей.",
+        logo: "https://ed.dev.br/data/files/ED/B2/BC/58/5FC2091051FD7009600808A8/logo-ed.png",
+        website: "https://ed.dev.br",
+        services: [
+          { category: "Типы услуг", sub: ["Внедрение и запуск", "Индивидуальная разработка", "Техническая поддержка", "Разработка плагинов и расширений"] },
+          {
+            category: "Корпоративные системы",
+            sub: [
+              "Бронирование и планирование",
+              "Управление бизнес-процессами (BPM)",
+              "Система управления контентом (CMS)",
+              "Управление взаимоотношениями с клиентами (CRM)",
+              "E-commerce / розница (подписки / дистрибуция)",
+              "Образование (LMS / студенты)",
+              "Финансы и бухгалтерия",
+              "Здравоохранение (EMR / управление пациентами)",
+              "Производство (MES / Orders)",
+              "Проекты и совместная работа (PM / Collaboration)",
+              "Недвижимость / управление объектами",
+              "Склад и запасы (WMS / Inventory)"
+            ]
+          },
+          {
+            category: "Отраслевые решения",
+            sub: ["Образование", "Финансовые услуги", "Госструктуры и общественные услуги", "Здравоохранение", "ИТ и ПО", "Производство", "Медиа и развлечения", "Строительство и недвижимость", "Розница / e-commerce"]
+          }
+        ],
+        contact: "leandro.postaue@ed.dev.br",
+        certified: false,
+        featured: false
+      }
+    ]
+  },
+  {
+    continent: "Океания",
+    partners: [
+      {
+        id: "1000158",
+        name: "Engineering Business Services Limited",
+        location: "Вануату · Порт-Вила",
+        description:
+          "С 2015 года компания EBS работает на рынке Вануату и предоставляет полный цикл ИТ-услуг: от проектирования систем до сопровождения, включая SLA-контракты и поддержку 24/7.",
+        logo: "https://ebs-vanuatu.com/wp-content/uploads/2021/05/EBS-LOGO-seul-smol-soml.png",
+        website: "https://ebs-vanuatu.com",
+        services: [
+          { category: "Типы услуг", sub: ["Внедрение и запуск", "Индивидуальная разработка", "Техническая поддержка", "Сопровождение и поддержка"] },
+          { category: "Корпоративные системы", sub: ["Управление бизнес-процессами (BPM)", "Система управления контентом (CMS)", "E-commerce / розница (подписки / дистрибуция)", "Проекты и совместная работа (PM / Collaboration)"] },
+          { category: "Отраслевые решения", sub: ["Финансовые услуги", "ИТ и ПО"] }
+        ],
+        contact: "arnaud@ebs-vanuatu.com",
+        certified: false,
+        featured: false
+      }
+    ]
+  }
+];
+
+// ✅ Normalizer
+const normalize = (s: string) => (s || "").trim();
+
+const filterCategoriesMap = {
+  "Типы услуг": new Set<string>(),
+  "Корпоративные системы": new Set<string>(),
+  "Отраслевые решения": new Set<string>(),
+};
+
+partnersByContinent.forEach((region) => {
+  region.partners.forEach((partner) => {
+    partner.services.forEach((service) => {
+      const cat = normalize(service.category);
+
+      // Only collect sub-items for Корпоративные системы / Отраслевые решения
+      if (cat === "Корпоративные системы") {
+        service.sub.forEach((sub) => {
+          const item = normalize(sub);
+          if (item) filterCategoriesMap["Корпоративные системы"].add(item);
+        });
+        return;
+      }
+
+      if (cat === "Отраслевые решения") {
+        service.sub.forEach((sub) => {
+          const item = normalize(sub);
+          if (item) filterCategoriesMap["Отраслевые решения"].add(item);
+        });
+        return;
+      }
+
+      // Everything else goes under "Типы услуг": the category itself + its sub-items
+      if (cat && cat !== "Типы услуг") {
+        filterCategoriesMap["Типы услуг"].add(cat);
+      }
+      service.sub.forEach((sub) => {
+        const item = normalize(sub);
+        if (item) filterCategoriesMap["Типы услуг"].add(item);
+      });
+    });
+  });
+});
+
+// Convert to array and remove empties / self references
+const filterCategories = Object.entries(filterCategoriesMap).map(([title, set]) => ({
+  title,
+  items: Array.from(set).filter((it) => it && it !== title),
+}));
+
+// Sidebar counts per sub-item (e.g., Deployment, CRM, ERP, …)
+const itemCountMap: Record<string, number> = {};
+partnersByContinent.forEach((region) => {
+  region.partners.forEach((p) => {
+    const seen = new Set<string>();
+    p.services.forEach((s) => {
+      s.sub.forEach((raw) => {
+        const sub = (raw || "").trim();
+        if (!sub || seen.has(sub)) return;
+        seen.add(sub);
+        itemCountMap[sub] = (itemCountMap[sub] || 0) + 1;
+      });
+    });
+  });
+});
+
+// Country list
+const countries = Array.from(
+  new Set(
+    partnersByContinent.flatMap((region) =>
+      region.partners.map((p) => p.location.split("·")[0].trim()),
+    ),
+  ),
+);
+
+// Flatten services (kept here if you need it later)
+const serviceCountMap = {};
+partnersByContinent.forEach((region) => {
+  region.partners.forEach((p) => {
+    p.services.forEach((s) => {
+      serviceCountMap[s] = (serviceCountMap[s] || 0) + 1;
+    });
+  });
+});
+---
+
+<Layout title={title} description={description} keywords={keywords}>
+  <PageHeader title={title} description={description} />
+
+  <!-- Start Partners -->
+  <section class="section">
+    <div class="container">
+      <div class="row">
+        <!-- Sidebar -->
+        <div class="col-lg-2 col-md-3">
+          <div class="card border-0 rounded sticky-bar" style="z-index: 1;">
+            <div>
+              <h6 class="text-dark">Быстрая навигация</h6>
+              <ul class="list-unstyled sidebar-nav-list mb-4">
+                {partnersByContinent.map((region) => (
+                  <li>
+                    <a href={`#${region.continent}`} class="text-muted">
+                      <i class="uil uil-globe me-2"></i>
+                      {region.continent}
+                    </a>
+                  </li>
+                ))}
+              </ul>
+
+              {/* Filter sections */}
+              {filterCategories.map((category) => (
+                <div class="filter-section">
+                  <h6 class="filter-title">
+                    <span>{category.title}</span>
+                    {(category.title === "Корпоративные системы" ||
+                      category.title === "Отраслевые решения") && (
+                      <i
+                        class="uil uil-info-circle info-right text-muted small sub-alarm"
+                        data-bs-toggle="tooltip"
+                        data-bs-placement="top"
+                        title={
+                          category.title === "Корпоративные системы"
+                            ? "Готовые решения, которые можно сразу поставить и внедрить"
+                            : "Отраслевой опыт для проектов под ваши задачи"
+                        }
+                      ></i>
+                    )}
+                  </h6>
+
+                  <div class="filter-options">
+                    {category.items.map((item) => {
+                      const count = itemCountMap[item] || 0;
+                      return (
+                        <a
+                          role="button"
+                          class="filter-link"
+                          data-filter-type="service"
+                          data-filter-value={item}
+                          data-active="false"
+                        >
+                          <input type="checkbox" value={item} style="margin-right: 8px;" />
+                          {item} <span class="filter-count">({count})</span>
+                        </a>
+                      );
+                    })}
+                  </div>
+                </div>
+              ))}
+
+              <div class="mt-4">
+                <a href="#become-partner" class="btn btn-primary btn-sm w-100">Стать партнером</a>
+              </div>
+            </div>
+          </div>
+        </div>
+        {/* end col */}
+
+        <!-- Main content -->
+        <div class="col-lg-9 col-md-8">
+          <div class="ms-lg-4">
+            <div class="mb-4 d-flex justify-content-between align-items-start">
+              <p class="text-muted mb-0 me-3">
+                Мы работаем с проверенными сервисными партнерами по всему миру, чтобы предоставить профессиональное внедрение NocoBase,
+                индивидуальную разработку, техническую поддержку и обучение. Где бы вы ни находились, поблизости найдется эксперт, готовый помочь.
+              </p>
+
+              <a id="nocobase"
+                href="https://service-en.nocobase.com/public-forms/q7pbwgd4xr7?partnerId=nocobase"
+                class="btn btn-primary btn-sm btn-help text-nowrap"
+                data-bs-toggle="tooltip"
+                data-bs-placement="left"
+                title="Если вы не уверены, какого партнера выбрать, или хотите связаться с нами напрямую, нажмите сюда.">
+                <i class="uil uil-message me-1"></i>
+                Помощь
+              </a>
+            </div>
+
+            {/* Search & filters */}
+            <div class="partners-header mb-4 sticky-search" style="z-index: 1;">
+              <div class="row align-items-center g-3">
+                {/* Search box */}
+                <div class="col-lg-5 col-md-6 col-12">
+                  <div class="search-container">
+                    <div class="position-relative">
+                      <input
+                        type="text"
+                        class="form-control"
+                        placeholder="Найти партнеров..."
+                        id="partnerSearch"
+                        style="padding-left: 40px;"
+                      />
+                      <i
+                        class="uil uil-search position-absolute"
+                        style="left: 12px; top: 50%; transform: translateY(-50%); color: #6c757d; font-size: 18px;"
+                      ></i>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="col-lg-4 col-md-3 col-12 text-center"></div>
+
+                {/* Country filter */}
+                <div class="col-lg-3 col-md-3 col-12 text-end">
+                  <div class="plugins-sort">
+                    <select class="form-select form-select-sm">
+                      <option value="">Выберите страну</option>
+                      {countries.map((country) => (
+                        <option value={country}>{country}</option>
+                      ))}
+                    </select>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            {/* Partners Content */}
+            {partnersByContinent.map((region) => (
+              <div class="mt-4" id={region.continent}>
+                <h4 class="text-primary mb-4">
+                  <i class="uil uil-globe me-2"></i>
+                  {region.continent}
+                </h4>
+
+                <div class="row">
+                  {region.partners.map((partner) => {
+                    // Normalize website URL and show button only if present
+                    const raw = partner.website || "";
+                    const trimmed = raw.trim();
+                    const websiteUrl = trimmed
+                      ? (trimmed.startsWith("http://") || trimmed.startsWith("https://")
+                        ? trimmed
+                        : `https://${trimmed}`)
+                      : "";
+
+                    return (
+                      <div class="col-lg-6 col-md-6 mb-4">
+                        <div
+                          class="card border shadow-sm h-100 partner-card w-100"
+                          data-name={partner.name}
+                          data-country={partner.location.split("·")[0].trim()}
+                          data-services={encodeURIComponent(
+                            JSON.stringify(partner.services.flatMap((s) => s.sub.map((x) => x.trim()))),
+                          )}
+                        >
+                          <div class="card-body">
+                            <div class="mb-4">
+                              <div class="d-flex align-items-center justify-content-between mb-3">
+                                {partner.name === "Purple Bridge Sdn Bhd" ? (
+                                  <div class="partner-logo" style="background: #050d42;">
+                                    <img src={partner.logo} alt={partner.name} loading="lazy" />
+                                  </div>
+                                ) : (
+                                  <div class="partner-logo">
+                                    <img src={partner.logo} alt={partner.name} loading="lazy" />
+                                  </div>
+                                )}
+
+                                {partner.certified && (
+                                  <span
+                                    class="badge bg-soft-success text-success"
+                                    data-bs-toggle="tooltip"
+                                    data-bs-placement="top"
+                                    title="Официальная сертификация NocoBase и признанные профессиональные услуги"
+                                  >
+                                    <i class="uil uil-check-circle me-1"></i>
+                                    Сертифицировано
+                                  </span>
+                                )}
+                              </div>
+
+                              <div class="mt-3">
+                                <h6 class="mb-1">{partner.name}</h6>
+                                <small class="text-muted">
+                                  <i class="uil uil-map-marker me-1"></i>
+                                  {partner.location}
+                                </small>
+                              </div>
+                            </div>
+
+                            <p class="text-muted mb-3">{partner.description}</p>
+
+                            {(() => {
+                              const subs =
+                                partner.services
+                                  .filter((s) => s.category === "Типы услуг")
+                                  .flatMap((s) => (s.sub || []).map((x) => x.trim()))
+                                  .filter(Boolean);
+
+                              const uniqueSubs = Array.from(new Set(subs));
+
+                              if (!uniqueSubs.length) return null;
+
+                              return (
+                                <div class="mb-3 services-block">
+                                  <h6 class="text-dark mb-2">Услуги:</h6>
+                                  <div class="services-tags">
+                                    {uniqueSubs.map((item) => (
+                                      <span class="badge bg-soft-primary text-primary">{item}</span>
+                                    ))}
+                                  </div>
+                                </div>
+                              );
+                            })()}
+
+                            <div class="pt-3 border-top card-actions">
+                              <div class="d-flex justify-content-between align-items-center">
+                                <a
+                                  href={`${
+                                    partner.cn
+                                      ? "https://service-cn.nocobase.com/public-forms/ivcvb4f8lpe"
+                                      : "https://service-en.nocobase.com/public-forms/ivcvb4f8lpe"
+                                  }?partnerId=${encodeURIComponent(partner.id)}`}
+                                  class="btn btn-sm btn-outline-primary"
+                                >
+                                  <i class="uil uil-envelope me-1"></i>
+                                  Связаться с партнером
+                                </a>
+
+                                {websiteUrl && (
+                                  <a href={websiteUrl} target="_blank" class="btn btn-sm btn-soft-primary">
+                                    <i class="uil uil-external-link-alt me-1"></i>
+                                    Сайт
+                                  </a>
+                                )}
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    );
+                  })}
+                </div>
+              </div>
+            ))}
+
+            {/* No results */}
+            <div class="no-results text-center py-5" id="no-result-message" style="display: none;">
+              <i class="uil uil-search text-muted" style="font-size: 3rem;"></i>
+              <h5 class="mt-3 text-muted">Нет партнеров, подходящих под выбранные фильтры</h5>
+              <p class="text-muted">Попробуйте изменить условия поиска или фильтры.</p>
+            </div>
+          </div>
+        </div>
+        {/* end col */}
+      </div>
+      {/* end row */}
+    </div>
+    {/* end container */}
+  </section>
+  {/* End Partners */}
+
+  {/* Become Partner Start */}
+  <section class="section bg-light" id="become-partner">
+    <div class="container">
+      <div class="row justify-content-center">
+        <div class="col-12">
+          <div class="section-title text-center mb-4 pb-2">
+            <h4 class="title mb-4">Станьте партнером NocoBase</h4>
+            <p class="para-desc mx-auto text-muted mb-0">
+              Если вы предоставляете профессиональные услуги и хотите присоединиться к партнерской программе NocoBase, будем рады сотрудничеству. Мы предлагаем техническую поддержку, обучающие материалы и маркетинговую поддержку, чтобы помочь вашему бизнесу расти.
+            </p>
+          </div>
+        </div>
+        {/* end col */}
+      </div>
+      {/* end row */}
+
+      <div class="row justify-content-center">
+        <div class="col-lg-10">
+          <div class="card bg-light border-0">
+            <div class="card-body">
+              <h6 class="text-dark mb-4 text-center">Преимущества для партнеров</h6>
+              <div class="row justify-content-center">
+                <div class="col-lg-3 col-md-4 text-center">
+                  <ul class="list-unstyled text-muted mb-0">
+                    <li class="mb-2 d-flex align-items-center justify-content-start">
+                      <i class="uil uil-check-circle text-success me-2"></i>
+                      <span>Официальная сертификация и право использования бренда</span>
+                    </li>
+                    <li class="mb-2 d-flex align-items-center justify-content-start">
+                      <i class="uil uil-check-circle text-success me-2"></i>
+                      <span>Обучение и сертификационные треки</span>
+                    </li>
+                    <li class="mb-2 d-flex align-items-center justify-content-start">
+                      <i class="uil uil-check-circle text-success me-2"></i>
+                      <span>Публикация на нашем сайте</span>
+                    </li>
+                  </ul>
+                </div>
+
+                <div class="col-lg-3 col-md-4 text-center">
+                  <ul class="list-unstyled text-muted mb-0">
+                    <li class="mb-2 d-flex align-items-center justify-content-start">
+                      <i class="uil uil-check-circle text-success me-2"></i>
+                      <span>Маркетинговая поддержка и материалы</span>
+                    </li>
+                    <li class="mb-2 d-flex align-items-center justify-content-start">
+                      <i class="uil uil-check-circle text-success me-2"></i>
+                      <span>Приоритетная передача лидов</span>
+                    </li>
+                    <li class="mb-2 d-flex align-items-center justify-content-start">
+                      <i class="uil uil-check-circle text-success me-2"></i>
+                      <span>Совместное развитие экосистемы NocoBase</span>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        {/* end col */}
+      </div>
+      {/* end row */}
+
+      <div class="row justify-content-center">
+        <div class="col-12 text-center mt-4">
+          <a href="https://service-cn.nocobase.com/public-forms/iv0g603rvzp" class="btn btn-primary me-2">
+            <i class="uil uil-user-plus me-1"></i>
+            Подать заявку на партнерство
+          </a>
+          <a href="/cn/contact" class="btn btn-outline-primary">
+            <i class="uil uil-envelope me-1"></i>
+            Узнать больше
+          </a>
+        </div>
+        {/* end col */}
+      </div>
+      {/* end row */}
+    </div>
+    {/* end container */}
+  </section>
+  {/* Become Partner End */}
+
+  <style>
+    .partner-logo {
+      height: 30px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 8px;
+      background-color: #f8f9fa;
+      border-radius: 8px;
+      border: 1px solid #e9ecef;
+    }
+
+    .partner-logo img {
+      height: 100% !important;
+      width: auto;
+      max-width: 100%;
+      object-fit: contain;
+      transition: opacity 0.3s ease;
+    }
+
+    .partner-logo:hover img {
+      opacity: 0.8;
+    }
+
+    /* Sticky elements */
+    .sticky-search {
+      position: sticky;
+      top: 70px;
+      z-index: 1000;
+      background: #fff;
+      padding: 1rem 0;
+      border-bottom: 1px solid #e9ecef;
+    }
+
+    .sticky-bar {
+      position: sticky;
+      top: 100px;
+      z-index: 99;
+    }
+
+    .sidebar-nav-list li a {
+      display: flex;
+      align-items: center;
+      padding: 8px 12px;
+      border-radius: 6px;
+      transition: all 0.3s ease;
+      text-decoration: none;
+    }
+
+    .sidebar-nav-list li a:hover {
+      background-color: #f8f9fa;
+      color: #2f55d4 !important;
+    }
+
+    /* Sidebar filters */
+    .plugins-sidebar {
+      position: sticky;
+      top: 80px;
+      height: fit-content;
+    }
+
+    .filter-section {
+      margin-bottom: 1.5rem;
+    }
+
+    .filter-title {
+      font-weight: 600;
+      margin-bottom: 0.5rem;
+      color: #343a40;
+      font-size: 1rem;
+    }
+
+    .filter-options {
+      display: flex;
+      flex-direction: column;
+      gap: 0.1rem;
+    }
+
+    .filter-link {
+      display: flex;
+      align-items: center;
+      padding: 0.3rem 0.5rem;
+      border-radius: 3px;
+      text-decoration: none;
+      font-size: 0.95rem;
+      font-weight: normal;
+      transition: all 0.2s;
+    }
+
+    .filter-link input[type="radio"],
+    .filter-link input[type="checkbox"] {
+      margin-right: 8px;
+      flex-shrink: 0;
+    }
+
+    .filter-link .filter-count {
+      margin-left: auto;
+      font-size: 0.8rem;
+      opacity: 0.7;
+    }
+
+    .filter-link:hover {
+      background-color: #f8f9fa;
+      text-decoration: none;
+    }
+
+    .filter-link[data-active="true"] {
+      font-weight: bold;
+    }
+
+    /* Cards */
+    .plugin-card {
+      transition: transform 0.2s, box-shadow 0.2s;
+      height: 100%;
+    }
+
+    .plugin-card:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1) !important;
+    }
+
+    .plugin-card .card-body {
+      display: flex;
+      flex-direction: column;
+      height: 100%;
+    }
+
+    .plugin-overview {
+      font-size: 0.9rem;
+      line-height: 1.4;
+      word-break: break-word;
+    }
+
+    .plugin-box {
+      flex: 1;
+    }
+
+    .plugin-footer {
+      margin-top: 1rem;
+    }
+
+    /* Responsive */
+    @media (max-width: 768px) {
+      .plugins-sidebar {
+        position: relative;
+        top: auto;
+        margin-bottom: 2rem;
+      }
+
+      .plugins-content {
+        padding-left: 0;
+      }
+
+      .sticky-search .col-12 {
+        margin-bottom: 0.5rem;
+      }
+
+      .sticky-search .col-12:last-child {
+        margin-bottom: 0;
+      }
+
+      .sticky-search .text-center,
+      .sticky-search .text-end {
+        text-align: left !important;
+      }
+    }
+
+    @media (max-width: 991px) {
+      .sticky-bar {
+        position: relative;
+        top: auto;
+        margin-bottom: 30px;
+      }
+    }
+
+    /* Partner card layout */
+    .partner-card .card-body {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .partner-card .services-block {
+      flex: 1 1 auto;
+      display: flex;
+      flex-direction: column;
+      min-height: 0;
+    }
+
+    .partner-card .services-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.25rem;
+      align-content: flex-start;
+    }
+
+    .partner-card .card-actions {
+      margin-top: auto;
+    }
+
+    .sub-alarm {
+      float: right;
+      margin-right: 0.5rem;
+    }
+  </style>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      // Helpers
+      const $ = (s, r = document) => r.querySelector(s);
+      const $$ = (s, r = document) => Array.from(r.querySelectorAll(s));
+      const norm = (s) => (s || "").normalize("NFKC").trim().toLowerCase();
+
+      const headerOffset = 140;
+
+      // Key nodes
+      const searchInput = $("#partnerSearch");
+      const countrySelect = document.querySelector(".plugins-sort select");
+      const serviceCheckboxes = $$('[data-filter-type="service"] input[type="checkbox"]');
+
+      // Cards and hosts
+      const cards = $$(".partner-card");
+      const cardHosts = new Map();
+      const cardTitles = new Map();
+
+      cards.forEach((card) => {
+        const host =
+          card.closest(".col-lg-6, .col-md-6, .col-sm-12, .col-12, .col-xl-6") || card.parentElement;
+        cardHosts.set(card, host);
+
+        const titleFromData = (card.dataset.name || "").trim();
+        const h6 = card.querySelector("h6");
+        const title = titleFromData || (h6 ? h6.textContent.trim() : "");
+        cardTitles.set(card, title);
+      });
+
+      const tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'))
+        tooltipTriggerList.map(function (tooltipTriggerEl) {
+          return new bootstrap.Tooltip(tooltipTriggerEl)
+        })
+
+      // Region groups that contain partner cards
+      const groups = $$("[id]").filter((el) => el.querySelector(".partner-card"));
+
+      // Scroll helpers
+      function scrollToSearch() {
+        if (!searchInput) return;
+        const top = searchInput.getBoundingClientRect().top + window.pageYOffset;
+        window.scrollTo({ top: top - headerOffset - 8, behavior: "smooth" });
+      }
+
+      function scrollToFirstVisibleCardOrSearch() {
+        const first = cards.find((card) => {
+          const host = cardHosts.get(card);
+          return host && host.style.display !== "none";
+        });
+
+        if (first) {
+          const host = cardHosts.get(first);
+          const top = host.getBoundingClientRect().top + window.pageYOffset;
+          window.scrollTo({ top: top - headerOffset - 8, behavior: "smooth" });
+        } else {
+          scrollToSearch();
+        }
+      }
+
+      // No results message
+      function updateNoResult() {
+        const anyVisible = cards.some((card) => {
+          const host = cardHosts.get(card);
+          return host && host.style.display !== "none";
+        });
+        const msg = $("#no-result-message");
+        if (msg) msg.style.display = anyVisible ? "none" : "block";
+      }
+
+      // Core filter: title only + country + service sub-items
+      function filterCards() {
+        const q = norm(searchInput ? searchInput.value : "");
+        const selectedCountry = countrySelect ? countrySelect.value.trim() : "";
+        const selectedServices = serviceCheckboxes.filter((cb) => cb.checked).map((cb) => cb.value);
+
+        cards.forEach((card) => {
+          const host = cardHosts.get(card);
+          if (!host) return;
+
+          const title = norm(cardTitles.get(card));
+          const matchText = !q || title.includes(q);
+
+          const cardCountry = (card.dataset.country || "").trim();
+          const matchCountry = !selectedCountry || cardCountry === selectedCountry;
+
+          let services = [];
+          try {
+            services = JSON.parse(decodeURIComponent(card.dataset.services || "%5B%5D"));
+          } catch {}
+          const matchServices =
+            selectedServices.length === 0 ? true : selectedServices.every((s) => services.includes(s));
+
+          host.style.display = matchText && matchCountry && matchServices ? "" : "none";
+        });
+
+        // Toggle region visibility
+        groups.forEach((group) => {
+          const hasVisible = $$(".partner-card", group).some((card) => {
+            const host = cardHosts.get(card);
+            return host && host.style.display !== "none";
+          });
+          group.style.display = hasVisible ? "" : "none";
+        });
+
+        updateNoResult();
+      }
+
+      // Sidebar checkbox toggles
+      $$(".filter-link").forEach((link) => {
+        link.addEventListener("click", (e) => {
+          e.preventDefault();
+          const cb = link.querySelector('input[type="checkbox"]');
+          if (!cb) return;
+          cb.checked = !cb.checked;
+          link.dataset.active = String(cb.checked);
+          filterCards();
+          scrollToFirstVisibleCardOrSearch();
+        });
+      });
+
+      serviceCheckboxes.forEach((cb) =>
+        cb.addEventListener("change", () => {
+          filterCards();
+          scrollToFirstVisibleCardOrSearch();
+        }),
+      );
+
+      // Search input
+      if (searchInput) {
+        searchInput.addEventListener("input", filterCards);
+        searchInput.addEventListener("compositionend", filterCards);
+      }
+
+      // Country select
+      if (countrySelect) {
+        countrySelect.addEventListener("change", filterCards);
+      }
+
+      // Smooth scroll for sidebar anchors
+      $$('.sidebar-nav-list a[href^="#"]').forEach((link) => {
+        link.addEventListener("click", (e) => {
+          e.preventDefault();
+          const id = link.getAttribute("href").substring(1);
+          const group = document.getElementById(id);
+          if (!group) return;
+
+          const firstVisible = $$(".partner-card", group).find((card) => {
+            const host = cardHosts.get(card);
+            return host && host.style.display !== "none";
+          });
+          if (!firstVisible) return;
+
+          const top =
+            (cardHosts.get(firstVisible) || firstVisible).getBoundingClientRect().top + window.pageYOffset;
+          window.scrollTo({ top: top - headerOffset, behavior: "smooth" });
+        });
+      });
+
+      // Init
+      filterCards();
+    });
+  </script>
+</Layout>
+
+

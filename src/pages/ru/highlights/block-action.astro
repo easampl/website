@@ -1,0 +1,68 @@
+---
+import PageHeader from "../../../components/PageHeader.astro";
+import Layout from "../../../layouts/Layout.astro";
+import { getPage } from "../../../utils";
+
+const page = await getPage("block-action");
+
+const title = page.title;
+const description = page.description;
+const keywords = page.keywords;
+---
+
+<Layout title={title} description={description} keywords={keywords}>
+  <PageHeader title={title}>
+    <span slot="description" set:html={description}></span>
+  </PageHeader>
+  <!-- Start Highlights -->
+  <section class="section">
+    <div class="container">
+      <div class="row align-items-top ">
+        <div class="col-lg-5 col-md-5">
+          <div class="section-title">
+            <h5 class="mb-4">Разделение <span class="text-primary">интерфейса и данных</span>: свободно комбинируйте блоки и действия</h5>
+            <p class="text-muted">В отличие от no-code продуктов, которые начинают с дизайна страницы, NocoBase ориентирован на данные: сначала структура данных, затем интерфейс. Это позволяет одному и тому же набору данных давать разные интерфейсы и действия под разные сценарии.</p>
+          </div>
+        </div><!--end col-->
+        <div class="col-lg-7">
+          <div class="card rounded border-0 shadow ms-lg-5">
+            <video controls class="rounded shadow">
+              <source src="https://static-docs.nocobase.com/BA-2.1-EN.mp4" type="video/mp4">
+            </video>
+          </div>
+        </div><!--end col-->
+      </div><!--end row-->
+      <div class="row align-items-top mt-100">
+        <div class="col-lg-5 col-md-5">
+          <div class="section-title">
+            <h5 class="mb-4">Один <span class="text-primary">блок фильтра</span> для нескольких потоков данных</h5>
+            <p class="text-muted">Если на странице есть несколько блоков данных, например таблицы или диаграммы, один блок фильтра может отбирать данные сразу для всех.</p>
+          </div>
+        </div><!--end col-->
+        <div class="col-lg-7">
+          <div class="card rounded border-0 shadow ms-lg-5">
+            <video controls class="rounded shadow">
+              <source src="https://static-docs.nocobase.com/BA-2.2-EN.mp4" type="video/mp4">
+            </video>
+          </div>
+        </div><!--end col-->
+      </div><!--end row-->
+      <div class="row align-items-top mt-100">
+        <div class="col-lg-5 col-md-5">
+          <div class="section-title">
+            <h5 class="mb-4">Используйте <span class="text-primary">потоки событий</span>, чтобы связывать блоки и действия</h5>
+            <p class="text-muted">Когда на странице присутствуют несколько блоков и действий, потоки событий помогают управлять их взаимодействием. Например, при просмотре клиента в CRM можно одновременно получать его заказы из ERP.</p>
+          </div>
+        </div><!--end col-->
+        <div class="col-lg-7">
+          <div class="card rounded border-0 shadow ms-lg-5">
+            <video controls class="rounded shadow">
+              <source src="https://static-docs.nocobase.com/BA-2.3-EN.mp4" type="video/mp4">
+            </video>
+          </div>
+        </div><!--end col-->
+      </div><!--end row-->
+    </div><!--end container-->
+  </section><!--end section-->
+  <!-- Highlights End -->
+</Layout>
