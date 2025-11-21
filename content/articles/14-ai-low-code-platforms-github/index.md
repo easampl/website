@@ -1,53 +1,30 @@
-Recently, while browsing the [r/AI\_Agents](https://www.reddit.com/r/AI_Agents/comments/1iwsiby/best_lowcode_ai_agent_builder/) subreddit on Reddit, I came across a question that felt surprisingly real:
+📝 Note: This article was last updated on Nov. 10, 2025. We regularly update the information to ensure you have the latest insights! 😊
 
-![Reddit1.png](https://static-docs.nocobase.com/image%20(1)-qx24dx.png)
-
-> *“Is there any low-code tool that actually lets AI execute tasks and run workflows?”*
-
-It sounds like a simple question, but it hits a pain point many developers share. There are plenty of “AI-powered low-code platforms” out there, but most of them only add a chat box — maybe they generate some SQL or form fields. But tools that let AI truly run workflows, call APIs, and function as an agent are still rare.
-
-Then the comments started to split. Someone bluntly said:
+Recently I came across a very blunt comment on Reddit:
 
 ![Reddit2.png](https://static-docs.nocobase.com/image-4j39lb.png)
 
-> *“These AI no-code platforms won’t last a year. If AI is really that powerful, it shouldn’t still rely on drag-and-drop flowcharts to work.”*
+> * "These no-code AI platforms will not last a year. If AI is really that powerful, it should not still depend on dragging workflow blocks to build features."*
 
-It’s a harsh take, but it also reflects a real concern: **If AI is already so capable, why do we still need no-code? Are these drag-and-drop tools destined to become obsolete?**
+The view is sharp, but this comment was posted eight months ago. Looking back now, these tools have not faded away. Many have become more mature, and new projects continue to appear.
 
-The interesting thing is — that comment was posted **eight months ago**. And today, not only are these tools still around, many have grown more mature, with even more new projects emerging.
+A few days ago, we also reviewed a list of [the most popular open-source no-code AI tools on GitHub](https://www.nocobase.com/en/blog/top-11-github-open-source-no-code-ai-tools). Based on stars, community activity, and feature maturity, many projects are not only active but continue to evolve with stronger AI capabilities.
 
-Just a few days ago, we compiled 💡[The Most Popular Open-Source No-Code AI Tools on GitHub](https://www.nocobase.com/en/blog/top-11-github-open-source-no-code-ai-tools)\. Looking at stars, community activity, and feature maturity, many of these tools are not only alive — they’re actively improving and expanding their AI capabilities.
-This shows that no-code/low-code + AI isn’t a short-lived hype — it’s something real, being built, used, and evolving.
-
-That said, skepticism still matters. Another comment put it clearly:
+Some Reddit users still argue that most AI low-code tools are in an early stage and that certain so-called AI agents are simply automation tools connected to an LLM.
 
 ![Reddit3.png](https://static-docs.nocobase.com/img_v3_02rc_522ac857-0534-4006-ae62-6b989e7e13bg-v1yz3w.png)
 
-> *“Look into open-source alternatives — most low-code AI tools are still in their early stages.
-> But most importantly: know exactly what problem you’re solving before choosing a tool.
-> A lot of so-called ‘AI Agents’ are really just traditional automation with an LLM stuck on top.”*
+---
 
-It’s hard to argue with that. Many “AI agent platforms” do little more than connect automation flows to an LLM — smarter on the surface, but still just tools.
+💬 Hey, you're reading the NocoBase blog. NocoBase is the most extensible AI-powered no-code/low-code development platform for building enterprise applications, internal tools, and all kinds of systems. It’s fully self-hosted, plugin-based, and developer-friendly. →[ Explore NocoBase on GitHub](https://github.com/nocobase/nocobase)
 
-We’ve covered related topics before, like 💡[Noteworthy Open-Source AI Agent Projects](https://www.nocobase.com/en/blog/github-open-source-ai-agent-projects) and 💡[Great Open-Source AI Tools](https://www.nocobase.com/en/blog/github-open-source-ai-projects).
+---
 
-But this time, instead of asking “Can AI build systems?”, we’re shifting the focus naturally from no-code to low-code.
+From our observation, the low-code ecosystem has been progressing steadily. Many platforms already support real business scenarios through data modeling, workflow logic, plugin extensions, and AI-driven collaboration.
 
-No-code is about enabling non-technical users to use AI — you don’t write code, but you can call models or generate content.
+For this article, we explored GitHub’s low-code topic and identified fourteen platforms that have already integrated AI in practical ways. We organized them into three categories: business system builders, agent workflow tools, and data-table-based applications.
 
-Low-code, however, is for people who understand the business and know a bit of tech — it focuses on **data modeling, process logic, permission systems, and plugin extensibility**, which are closer to real system building.
-
-So, we looked into the [GitHub“low-code”](https://github.com//topics/low-code) topic and focused on tools that:
-
-* ⭐ Have active communities and good maintenance (stars, updates, feedback)
-* 🤖 Clearly provide AI capabilities in their docs, not just a chatbot window
-* 🛠️ Support self-hosting or extensions and can actually be used in production environments
-
-Based on this, we shortlisted 14 representative low-code platforms that truly integrate AI.
-
-They each take different paths — some help build business systems, some focus on agent workflows, and some specialize in data and spreadsheet applications.
-
-Before diving into details, here’s an overview table showing how each of these 14 tools positions AI 👇
+Before getting into the details, you can use the following comparison table for a clear overview of how these fourteen tools position themselves and apply AI.👇
 
 **Comparison Table (AI Features × Tool Positioning Overview)**
 
@@ -77,7 +54,7 @@ They help users quickly create data models, forms, pages, permissions, and inter
 
 ### **NocoBase**
 
-⭐ 17k
+⭐️ Stars: 20k
 
 Website: [https://www.nocobase.com/](https://www.nocobase.com/)
 
@@ -85,15 +62,31 @@ GitHub: [https://github.com/nocobase/nocobase](https://github.com/nocobase/nocob
 
 ![noocobase.png](https://static-docs.nocobase.com/noocobase-auxpuu.png)
 
-* **Overview**: An open-source low-code platform featuring real **AI agents** that can assist in both building and using applications. AI can help create data models and page layouts during development, and later handle queries, analyze data, or answer business questions.
-* **Target users**: Teams building business systems — internal IT teams, B2B product teams, system integrators.
-* **Use cases**: CRM, approval workflows, project management, order and asset systems, with plugin support for automation and AI-driven modeling.
+**Overview**:
 
----
+NocoBase began as an open-source low-code platform built on a data-model-driven architecture and a plugin system.
+
+In version 2.0, it allows AI to take part in both system building and daily operation. It can write and run JavaScript inside the platform for complex logic and automation, and AI workers can be placed in any part of the system to improve the overall experience.
+
+![noocobase2.png](https://static-docs.nocobase.com/noocobase2-83efsk.png)
+
+**Build stage**
+
+AI workers can generate data models, field relations, page structures, and basic logic from natural language. Tasks that once required multiple configuration steps become simpler. With AI assistance, a business system can take shape much faster, greatly improving development efficiency.
+
+![noocobase3.png](https://static-docs.nocobase.com/noocobase3-geirqa.png)
+
+**Use stage**
+
+AI can query and interpret system data and provide relevant insights or suggestions, such as filling forms, summarizing customer information, or supporting research tasks.
+
+**Target users**: Teams building business systems — internal IT teams, B2B product teams, system integrators.
+
+**Use cases**: CRM, approval workflows, project management, order and asset systems, with plugin support for automation and AI-driven modeling.
 
 ### **ToolJet**
 
-⭐ 36.8k
+⭐️ Stars: 37k
 
 Website: [https://www.tooljet.ai/](https://www.tooljet.ai/)
 
@@ -101,15 +94,15 @@ GitHub: [https://github.com/ToolJet/ToolJet](https://github.com/ToolJet/ToolJet)
 
 ![ToolJet.png](https://static-docs.nocobase.com/ToolJet-7balkk.png)
 
-* **Overview**: A low-code platform for internal enterprise apps, combining AI Copilot + visual UI building + API integration.
-* **Target users**: Engineering, operations, or data teams that need internal dashboards fast.
-* **Use cases**: Admin panels, internal tools, API-based applications where AI can help write SQL, generate layouts, or scripts.
+**Overview**: ToolJet has long been a productive tool for building internal enterprise applications. With AI added, the development flow becomes even more efficient. AI Copilot generates page layouts, component logic, and basic interactions from natural language, which removes the need for developers to switch back and forth between components, scripts, and APIs. This describe-and-generate workflow reduces manual setup and scripting work and helps teams build internal tools in a more focused and cost-efficient way.
 
----
+**Target users**: Engineering, operations, or data teams that need internal dashboards fast.
+
+**Use cases**: Admin panels, internal tools, API-based applications where AI can help write SQL, generate layouts, or scripts.
 
 ### **Appsmith**
 
-⭐ 38.3k
+⭐️ Stars: 38k
 
 Website: [https://www.appsmith.com/](https://www.appsmith.com/)
 
@@ -117,15 +110,15 @@ GitHub: [https://github.com/appsmithorg/appsmith](https://github.com/appsmithorg
 
 ![Appsmith.png](https://static-docs.nocobase.com/Appsmith-ycvv0e.png)
 
-* **Overview**: Open-source internal app builder with Appsmith AI for automatic SQL generation, form logic, and component setup.
-* **Target users**: Front-end developers, data tool builders, teams creating CRUD systems.
-* **Use cases**: Query dashboards, internal admin tools, database utilities — e.g. natural language → AI generates SQL → table output.
+**Overview**: Appsmith is an open-source low-code platform designed for internal tool development, offering a strong component system, reliable data-source connections, and well-developed CRUD capabilities. With AI introduced, the development experience becomes smoother.  AI generates SQL queries, form validation logic, and basic scripts from natural language and can complete common page configuration automatically. This reduces the need to switch between code and component settings and speeds up internal tool development while lowering the barrier for data-focused applications.
 
----
+**Target users**: Front-end developers, data tool builders, teams creating CRUD systems.
+
+**Use cases**: Query dashboards, internal admin tools, database utilities — e.g. natural language → AI generates SQL → table output.
 
 ### **Budibase**
 
-⭐ 27.2k
+⭐️ Stars: 27k
 
 Website: [https://budibase.com/](https://budibase.com/)
 
@@ -133,15 +126,17 @@ GitHub: [https://github.com/Budibase/budibase](https://github.com/Budibase/budib
 
 ![Budibase.png](https://static-docs.nocobase.com/Budibase-gjjun3.png)
 
-* **Overview**: A platform for building custom business applications with database modeling, form generation, simple workflows, and AI-powered text/field generation.
-* **Target users**: Small and medium-sized teams, lightweight internal systems, no-code enthusiasts.
-* **Use cases**: Form apps, internal office tools, data-entry platforms. AI helps fill fields or create sample data, but complex logic support is limited.
+**Overview**: Budibase is an open-source low-code platform designed for internal business applications. It focuses on data modeling, form creation, and basic workflows and fits small to medium business needs. With AI added, Budibase enhances the building process by assisting with routine tasks.
 
----
+AI helps generate field content, fill data, and create simple page layouts, cutting down repetitive work in form setup and data entry. While it still has limited support for complex logic, AI makes Budibase more efficient for lightweight systems, internal form tools, and data-entry applications.
 
-### **refine**
+**Target users**: Small and medium-sized teams, lightweight internal systems, no-code enthusiasts.
 
-⭐ 33.1k
+**Use cases**: Form apps, internal office tools, data-entry platforms. AI helps fill fields or create sample data, but complex logic support is limited.
+
+### **Refine**
+
+⭐️ Stars: 33k
 
 Website: [https://refine.dev/](https://refine.dev/)
 
@@ -149,9 +144,11 @@ GitHub: [https://github.com/refinedev/refine](https://github.com/refinedev/refin
 
 ![refine.png](https://static-docs.nocobase.com/refine-64wrxv.png)
 
-* **Overview**: A React-based framework for building frontend admin panels with CRUD, permissions, and UI logic. Provides AI assistance for generating code and API bindings.
-* **Target users**: Frontend developers and tech teams that need flexibility rather than drag-and-drop tools.
-* **Use cases**: Admin dashboards and data tools where code-level control is required, but development speed is still important. Does not include backend modeling.
+**Overview**: Refine is a React-based framework for building admin panels and internal tools. It handles common CRUD flows, routing, permissions, and data connections well. Developers can describe the interface or feature in natural language, and AI generates the layout, interactions, and basic code as a ready-to-use React project.
+
+**Target users**: Frontend developers and tech teams that need flexibility rather than drag-and-drop tools.
+
+**Use cases**: Admin dashboards and data tools where code-level control is required, but development speed is still important. Does not include backend modeling.
 
 ## **AI Workflow / Agent Orchestration**
 
@@ -163,7 +160,7 @@ They excel at automation and execution, but usually lack complex data modeling, 
 
 ### **n8n**
 
-⭐ 151k
+⭐️ Stars: 157k
 
 Website: [https://n8n.io/](https://n8n.io/)
 
@@ -171,16 +168,16 @@ GitHub: [https://github.com/n8n-io/n8n](https://github.com/n8n-io/n8n)
 
 ![n8n.png](https://static-docs.nocobase.com/n8n-8riwih.png)
 
-* **Overview**: Open-source workflow automation platform that lets you combine AI nodes with API workflows.
-* **Target users**: Operations teams, support engineers, automation specialists, SMEs.
-* **Use cases**: Automated content generation, data sync, email replies, AI-assisted decision workflows
-  (e.g. AI replies to a customer → logs to database → sends email).
+**Overview**: n8n is an open-source low-code automation platform that links systems, APIs, and services through a visual interface. With AI nodes added, n8n can let LLMs analyze data, generate content, make decisions, and call external APIs inside a workflow rather than only follow preset rules.
 
----
+**Target users**: Operations teams, support engineers, automation specialists, SMEs.
+
+**Use cases**: Automated content generation, data sync, email replies, AI-assisted decision workflows
+(e.g. AI replies to a customer → logs to database → sends email).
 
 ### **Dify**
 
-⭐ 117k
+⭐️ Stars: 119k
 
 Website: [https://dify.ai/](https://dify.ai/)
 
@@ -188,15 +185,15 @@ GitHub: [https://github.com/langgenius/dify](https://github.com/langgenius/dify)
 
 ![Dify.png](https://static-docs.nocobase.com/Dify-gk2be6.png)
 
-* **Overview**: AI-native application and agent workflow platform with support for models, knowledge bases, memory, and tool calling.
-* **Target users**: Product teams and developers building AI assistants, knowledge bots, or prototypes.
-* **Use cases**: Knowledge-base chatbots, automated ticket handling, AI agents executing API actions.
+**Overview**: Dify is an open-source platform for building AI applications and Agents. It offers model management, knowledge bases, conversational orchestration, and tool integration. With these capabilities, Dify supports multi-step reasoning, API calls, data access, and visual Agent workflow building so teams can move smoothly from conversation to system actions.
 
----
+**Target users**: Product teams and developers building AI assistants, knowledge bots, or prototypes.
+
+**Use cases**: Knowledge-base chatbots, automated ticket handling, AI agents executing API actions.
 
 ### **Flowise**
 
-⭐ 46k
+⭐️ Stars: 47k
 
 Website: [https://flowiseai.com/](https://flowiseai.com/)
 
@@ -204,15 +201,15 @@ GitHub: [https://github.com/FlowiseAI/Flowise](https://github.com/FlowiseAI/Flow
 
 ![Flowise.png](https://static-docs.nocobase.com/Flowise-2vawwu.png)
 
-* **Overview**: Visual AI workflow builder based on LangChain, used to create RAG pipelines and conversational agents.
-* **Target users**: AI developers, prototype teams, early-stage startups.
-* **Use cases**: Knowledge Q&A, lightweight chatbots, multi-step reasoning demos — not suitable for full business systems.
+**Overview**: Flowise is an open-source low-code visual platform for building AI agents and LLM workflows. It offers a visual builder, execution tracing, API and SDK integrations, and local deployment. With AI capabilities included, Flowise supports multi-step agents, tool use, and knowledge retrieval. Teams can design human-AI collaboration and workflow logic simply by dragging and connecting nodes.
 
----
+**Target users**: AI developers, prototype teams, early-stage startups.
+
+**Use cases**: Knowledge Q&A, lightweight chatbots, multi-step reasoning demos — not suitable for full business systems.
 
 ### **Kestra**
 
-⭐ 22.7k
+⭐️ Stars: 23k
 
 Website: [https://kestra.io/](https://kestra.io/)
 
@@ -220,15 +217,15 @@ GitHub: [https://github.com/kestra-io/kestra](https://github.com/kestra-io/kestr
 
 ![Kestra.png](https://static-docs.nocobase.com/Kestra-1n19xy.png)
 
-* **Overview**: Backend workflow and data orchestration platform with AI Copilot for auto-generating workflows.
-* **Target users**: Data engineers, backend developers, DevOps teams.
-* **Use cases**: AI-generated scheduled jobs, data pipelines, API task chains — focused on backend execution.
+**Overview**: Kestra is an open-source platform for task orchestration and scheduling designed for visual workflows, execution plans, and monitoring. It supports AI-assisted YAML workflow generation, model calls, and conditional logic. Users can create complex task chains with natural language or templates and track execution with detailed logs.
 
----
+**Target users**: Data engineers, backend developers, DevOps teams.
+
+**Use cases**: AI-generated scheduled jobs, data pipelines, API task chains — focused on backend execution.
 
 ### **Node-RED**
 
-⭐ 22.2k
+⭐️ Stars: 22k
 
 Website: [https://nodered.org/](https://nodered.org/)
 
@@ -236,15 +233,15 @@ GitHub: [https://github.com/node-red/node-red](https://github.com/node-red/node-
 
 ![Node-RED.png](https://static-docs.nocobase.com/Node-RED-0c9pxy.png)
 
-* **Overview**: Event-driven visual workflow tool widely used in IoT and system integration.
-* **Target users**: Automation engineers, hardware developers, smart home/IoT teams.
-* **Use cases**: Camera detects motion → AI makes decision → trigger switch; device anomaly → AI analysis → send alert.
+**Overview**: Node-RED is an event-driven visual flow tool that connects devices, services, and APIs through nodes to build automation logic and data pipelines. The platform offers a variety of AI nodes for model inference, content generation, information analysis, and conditional decision making. Flows can execute more flexible actions based on model outputs. Nodes can also integrate with IoT devices, webhooks, or system events to create end-to-end processing workflows
 
----
+**Target users**: Automation engineers, hardware developers, smart home/IoT teams.
+
+**Use cases**: Camera detects motion → AI makes decision → trigger switch; device anomaly → AI analysis → send alert.
 
 ### **Sim**
 
-⭐ 17.2k
+⭐️ Stars: 18k
 
 Website: [https://www.sim.ai/](https://www.sim.ai/)
 
@@ -252,9 +249,11 @@ GitHub: [https://github.com/simstudioai/sim](https://github.com/simstudioai/sim)
 
 ![Sim.png](https://static-docs.nocobase.com/Sim-sygfqw.png)
 
-* **Overview**: Designed for multi-agent collaboration, with visual building, execution, and API deployment.
-* **Target users**: AI teams building multi-role agents, intelligent assistant startups.
-* **Use cases**: AI assistants, automated report generation, intelligent task execution — though not as mature as n8n or Dify.
+**Overview**: Sim is an open source platform for building multi-agent collaborative workflows. It organizes models, tools, and task steps through a visual interface. The platform supports multi-model cooperation, tool invocation, task decomposition, and flow execution. Agents can communicate, divide work, and complete reasoning or actions within the same workflow. Users can configure roles, capabilities, and task chains as needed to generate executable multi-agent systems.
+
+**Target users**: AI teams building multi-role agents, intelligent assistant startups.
+
+**Use cases**: AI assistants, automated report generation, intelligent task execution — though not as mature as n8n or Dify.
 
 ## **AI + Smart Spreadsheets / Database Tools**
 
@@ -266,7 +265,7 @@ They can be seen as “Airtable / Notion Database enhanced with AI”, ideal for
 
 ### **NocoDB**
 
-⭐ 58.4k
+⭐️ Stars: 59k
 
 Website: [https://nocodb.com/](https://nocodb.com/)
 
@@ -274,16 +273,16 @@ GitHub: [https://github.com/nocodb/nocodb](https://github.com/nocodb/nocodb)
 
 ![NocoDB.png](https://static-docs.nocobase.com/NocoDB-qk45qn.png)
 
-* **Overview**: Open-source Airtable alternative that turns any database (MySQL, PostgreSQL, etc.) into a visual spreadsheet tool.
-* **Target users**: Teams managing structured data — operations teams, internal collaboration groups, lightweight CRM users.
-* **Use cases**: Content repositories, customer tables, inventory management, team collaboration sheets.
-  AI features include field suggestions, content generation, auto-completion, and smart insights for data analysis.
+**Overview**: An open-source Airtable alternative that provides field configuration, view management, and basic automation. Its AI features support content generation, data completion, table analysis, and smart suggestions.
 
----
+**Target users**: Teams managing structured data — operations teams, internal collaboration groups, lightweight CRM users.
+
+**Use cases**: Content repositories, customer tables, inventory management, team collaboration sheets.
+AI features include field suggestions, content generation, auto-completion, and smart insights for data analysis.
 
 ### **Teable**
 
-⭐ 20k
+⭐️ Stars: 20k
 
 Website: [https://teable.ai/](https://teable.ai/)
 
@@ -291,16 +290,18 @@ GitHub: [https://github.com/teableio/teable](https://github.com/teableio/teable)
 
 ![Teable.png](https://static-docs.nocobase.com/Teable-n74cv7.png)
 
-* **Overview**: A PostgreSQL-based collaborative spreadsheet database with AI chat and smart autofill.
-* **Target users**: Airtable/Notion users or teams needing data collaboration with AI-powered assistance.
-* **Use cases**: Content management, lightweight data warehouse, team project tables.
-  Supports conversational data interaction — such as querying records via natural language, generating table data in bulk, or auto-creating reports.
+**Overview**: A data management platform similar to Airtable with support for field types, views, and team collaboration. Its AI features can generate table content through conversation, process data, create reports, and execute text-based commands, with models working directly inside the table.
+
+**Target users**: Airtable/Notion users or teams needing data collaboration with AI-powered assistance.
+
+**Use cases**: Content management, lightweight data warehouse, team project tables.
+Supports conversational data interaction — such as querying records via natural language, generating table data in bulk, or auto-creating reports.
 
 ## **Tools That Don’t Fully Fit Into the Above Categories**
 
 During our research, we also found tools that don’t completely fall into any of the three main categories — such as **Onlook**.
 
-⭐ 22.9k
+⭐️ Stars: 23k
 
 Website: [https://onlook.com/](https://onlook.com/)
 
@@ -310,27 +311,7 @@ GitHub: [https://github.com/onlook-dev/onlook](https://github.com/onlook-dev/onl
 
 What makes Onlook different is that its core capability is “AI-generated UI interfaces.”
 
-With natural language or wireframes, AI can automatically generate page layouts, UI components, and even React code. These tools sit between design platforms and frontend low-code development, focusing on AI-assisted UI creation.
-
-## **Tools That Span More Than One Category — Such as NocoBase**
-
-Earlier, we grouped tools into three types — business application builders, workflow/agent tools, and data/table intelligence platforms.
-But in practice, some platforms span multiple categories — and **NocoBase is the most complete and architecturally unified among them.**
-
-Unlike most tools, NocoBase brings together capabilities from multiple dimensions:
-
-* Like a data platform, it provides database tables, fields, views, and APIs.
-* Like a business system builder, it can generate pages, forms, permissions, page logic, and relational models.
-* Through plugins and its open architecture, it can also extend into workflows, automation, and even embed AI nodes to execute parts of a process.
-
-Of course, there are other tools with some cross-category features as well:
-
-* Appsmith, ToolJet, Budibase — while mainly UI builders, they also support lightweight flows such as “button click → API → write data”.
-* NocoDB, Teable — data-centric tools that now include AI autofill, webhook triggers, and basic rule automation.
-
-However, these tools mostly add small AI features on top of their core functionality, making the experience smoother — but they do not form full workflow engines or complete system capabilities, and their extensibility is limited.
-
-In contrast, NocoBase is not just “covering more areas”, but a true hybrid platform — starting from data modeling at the core, extending to pages and permissions, and further to workflows and AI via plugins. This level of architectural integration is rare among open-source low-code platforms.
+You can describe a page in natural language or provide a wireframe, and the platform will produce the page structure and component layout. It generates React code, manages styles and layout relationships, and offers visual editing so you can refine the interface and adjust component hierarchy. The tool is designed for interface building with AI assisted design, sitting between a design tool and a low code front end platform.
 
 ## **Final Thoughts**
 
