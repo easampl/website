@@ -17,8 +17,7 @@ const RUSSIAN_REDIRECT_PAGES = [
 const RUSSIAN_REDIRECT_PATTERNS = [
   /^\/ru\/tutorials\/.*$/,
   /^\/ru\/blog\/.*$/,
-  /^\/ru\/highlights\/.*$/,
-  /^\/ru\/solutions\/ticketing-v2$/
+  /^\/ru\/highlights\/.*$/
 ];
 
 // Define French pages that should redirect to English
